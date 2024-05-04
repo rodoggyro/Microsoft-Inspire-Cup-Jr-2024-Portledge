@@ -5,10 +5,18 @@ from random import *
 This script is used to generate a csv file with random data for the healthData.csv file.
 
 Suggestions Key:
+    0. No suggestion
     1. Cut calories
     2. Excerise more
+    3. Walk more
 Dislikes Key:
+    0. No dislike
+    1. Fasting
+    2. Excerise
+    3. Walking
 '''
+
+# Rowan do rows 1-250
 
 with open('healthData.csv', 'w') as file:
     writer = csv.writer(file)
@@ -43,7 +51,7 @@ with open('healthData.csv', 'w') as file:
                     150, 
                     randint(500, 15000), 
                     0,
-                    0
+                    randint(0, 3)
                 ]
             else:
                 data = [
@@ -56,7 +64,7 @@ with open('healthData.csv', 'w') as file:
                     125, 
                     randint(500, 15000), 
                     0,
-                    0
+                    randint(0, 3)
                 ]
         
         #get the header of a csv file and write it to the file
